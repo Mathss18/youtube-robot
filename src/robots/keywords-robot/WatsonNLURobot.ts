@@ -1,7 +1,7 @@
 import { sentences } from 'sbd';
 import { ContentOutput } from "../fetch-content-robot/WikpediaRobot";
 import KeywordsRobotInterface from "./KeywordsRobotInterface";
-import * as credentials from '../../watson-nlu-credentials.json';
+import * as credentials from '../../credentials/watson-nlu-credentials.json';
 import NaturalLanguageUnderstanding from "ibm-watson/natural-language-understanding/v1";
 import { IamAuthenticator } from "ibm-watson/auth";
 

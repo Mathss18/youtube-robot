@@ -1,5 +1,5 @@
 import TextToSpeechRobotInterface from './TextToSpeecRobotInterface';
-import * as credentials from '../../watson-tts-credentials.json'
+import * as credentials from '../../credentials/watson-tts-credentials.json'
 import { IamAuthenticator } from 'ibm-watson/auth';
 import TextToSpeechV1 from 'ibm-watson/text-to-speech/v1'
 import fs from 'fs'

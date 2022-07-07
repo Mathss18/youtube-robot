@@ -1,6 +1,6 @@
 import ImagesRobotInterface from "./ImagesRobotInterface";
 import { google } from 'googleapis'
-import * as credentials from '../../google-gcs-credentials.json'
+import * as credentials from '../../credentials/google-gcs-credentials.json'
 import { ContentOutput } from "../fetch-content-robot/WikpediaRobot";
 import imageDownloader from 'image-downloader';
 import gm from 'gm';
