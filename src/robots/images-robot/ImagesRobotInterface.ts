@@ -1,5 +1,6 @@
-import { ContentOutput } from "../fetch-content-robot/WikpediaRobot";
+import { DataType } from "../../data/storage";
+
 
 export default interface ImagesRobotInterface {
-  setImages(electedTerm:string, sentences: ContentOutput[]): Promise<ContentOutput[]>
+  setImages(electedTerm:string, sentences: DataType): Promise<DataType>
 }

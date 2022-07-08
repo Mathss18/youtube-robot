@@ -1,3 +1,5 @@
+import { DataType } from "../../data/storage";
+
 export default interface TextToSpeechRobotInterface {
-  speech(text: string): Promise<void>
+  speech(): Promise<DataType>
 }

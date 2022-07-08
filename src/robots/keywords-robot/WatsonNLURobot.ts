@@ -1,9 +1,10 @@
-import { sentences } from 'sbd';
-import { ContentOutput } from "../fetch-content-robot/WikpediaRobot";
+
 import KeywordsRobotInterface from "./KeywordsRobotInterface";
 import * as credentials from '../../credentials/watson-nlu-credentials.json';
 import NaturalLanguageUnderstanding from "ibm-watson/natural-language-understanding/v1";
 import { IamAuthenticator } from "ibm-watson/auth";
+import { Logger } from '../../utils/logger';
+import { DataType, Storage } from "../../data/storage";
 
 export default class WatsonNLURobot implements KeywordsRobotInterface {
   private nlu: NaturalLanguageUnderstanding;
@@ -17,14 +18,16 @@ export default class WatsonNLURobot implements KeywordsRobotInterface {
       serviceUrl: credentials.url,
     });
   }
-  async setKeywords(sentences: ContentOutput[]): Promise<ContentOutput[]> {
-
-    for (const sentence of sentences) {
+  async setKeywords(): Promise<DataType> {
+    const data = Storage.getData()
+    for (const sentence of data.sentences) {
+      Logger.green(`[Keywords Robot] Watson está buscando keywords na frase`);
       const response: string[] = await this.fetchKeyWords(sentence.sentence)
       sentence.keyword = response;
     }
 
-    return sentences;
+    Storage.setSentences(data?.sentences || []);
+    return Storage.getData();
   }
 
   private async fetchKeyWords(sentence: string): Promise<string[]> {

@@ -1,5 +1,6 @@
-import { ContentOutput } from "../fetch-content-robot/WikpediaRobot";
+import { DataType } from "../../data/storage";
+
 
 export default interface KeywordsRobotInterface {
-  setKeywords(text: ContentOutput[]): Promise<ContentOutput[]>
+  setKeywords(text: DataType): Promise<DataType>
 }

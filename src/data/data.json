@@ -1,0 +1,22 @@
+{
+  "term": "Pokemon",
+  "selectedTerm": "Pokémon",
+  "sentences": [
+    {
+      "sentence": "Pokémon (ポケモン, Pokemon?) é uma franquia de mídia que pertence a The Pokémon Company, tendo sido criada por Satoshi Tajiri em 1995.",
+      "voice": "",
+      "keyword": [
+        "franquia de mídia",
+        "The Pokémon Company",
+        "Satoshi Tajiri",
+        "Pokémon",
+        "ポケモン",
+        "Pokemon"
+      ],
+      "images": [
+        "https://thumbs.dreamstime.com/z/pokemon-pikachu-e-cinzas-tamb%C3%A9m-conhecido-como-monstros-de-bolso-no-jap%C3%A3o-%C3%A9-uma-franquia-m%C3%ADdia-japonesa-gerenciada-pela-208075295.jpg",
+        "https://i.pinimg.com/564x/e2/9c/7d/e29c7d85aff0bd97cb526c57dc3bd7d0.jpg"
+      ]
+    }
+  ]
+}
